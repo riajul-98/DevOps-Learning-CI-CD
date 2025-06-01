@@ -12,3 +12,16 @@ Repository containing topics I learnt in the CoderCo CICD Module.
 - Improved Quality: due to continuously testing and integrating code
 - Reduced Risk: due to smaller changes being tested and integrated rather than large changes
 - Better Collaboration: Fewer conflicts and better communication
+
+## Github Actions Workflow Syntax and Structure
+Must have a workflow file which is a YAML file and is usually located in the .github/workflows. A breakdown of the workflow can be seen below:
+
+![alt text](image.png)
+
+- Events: Actions that trigger workflows (e.g. push, pull request, schedule)
+- Jobs: 
+    - Independant tasks that run in parallel or sequentially
+    - Each job runs on a Virtual Machine
+- Steps:
+    - Individual commands or actions executed in the job.
+    - Steps run sequentially within a job
