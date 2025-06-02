@@ -60,3 +60,19 @@ To create a custom action:
 - Define the action metadata in an action.yaml file.
 - Write code for your action. This file will be similar to dockerfile if you are writing for docker and index.js for javascript.
 - Publish your action to github marketplace (optional)
+
+## Automating tests and linting
+- Linting: Analyses code for potential errors and enforcing coding standards
+- Automated testing: Running tests automatically on your codebase to ensure it works as expected
+
+## Deploying to various environments (staging, dev, prod)
+Environment types: Development, staging and production
+Deployment strategies: Manual Deployment and Automated Deployment
+Tools: AWS, EC2, ECS, EKS, Lambda. Azure AKS
+
+## Security in CICD
+- Secure your secrets
+- Control access
+- Scan for vulnerabilities
+- Audit and monitor
+
