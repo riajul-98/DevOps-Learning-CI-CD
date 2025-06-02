@@ -8,7 +8,7 @@ jobs:
 
     steps:
     - name: checkout code
-      uses: actions/checout@v2
+      uses: actions/checkout@v2
 
     - name: hello world
       uses: riajul-98/coderco-custom@main
