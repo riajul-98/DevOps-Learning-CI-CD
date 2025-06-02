@@ -1,0 +1,16 @@
+name: CoderCo csutom action CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: checkout code
+      uses: actions/checout@v2
+
+    - name: hello world
+      uses: riajul-98/coderco-custom@main
+      with:
+        who-to-greet: 'Riajul'

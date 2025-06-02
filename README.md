@@ -47,3 +47,16 @@ Must have a workflow file which is a YAML file and is usually located in the .gi
 
 ## Matrix Builds and Parallel Testing
 - Matrix Builds: Allow you to run multiple job configurations in parallel. Useful for testing in different environments such as different OS's
+
+## Secrets and Encrypted Vars
+To use secrets, you would need to add it to repository > settings > Add secrets
+To use the secret in your workflow file, you would add it as a variable like `${{ secrets.MY_SECRET }}` or if you set it as an environment variable, you can call it with $MY_SECRET
+
+## Creating Custom actions
+Reusable units of code which automate specific tasks in your pipeline. There are 3 types of actions; JavaScript actions, docker actions and composite actions which are pieces which are reusable.
+
+To create a custom action:
+- Create a new repo for your action
+- Define the action metadata in an action.yaml file.
+- Write code for your action. This file will be similar to dockerfile if you are writing for docker and index.js for javascript.
+- Publish your action to github marketplace (optional)
