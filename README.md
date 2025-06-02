@@ -25,3 +25,25 @@ Must have a workflow file which is a YAML file and is usually located in the .gi
 - Steps:
     - Individual commands or actions executed in the job.
     - Steps run sequentially within a job
+
+## Conditions and expressions
+- Conditions allow you to control when a job or step should run based on certain criteria
+- Expressions provide a way to perform calculations, manipulate strings and more, within your workflow file.
+
+```
+
+# Using Conditions: Run a step only if the previous step succeeded
+
+- name: Run Tests
+  run: python -m unittest discover
+  if: success()
+
+# Using Expressions: Print a message with the branch name
+
+- name: Print branch name
+  run: echo The branch is ${{ github.ref }}
+
+```
+
+## Matrix Builds and Parallel Testing
+- Matrix Builds: Allow you to run multiple job configurations in parallel. Useful for testing in different environments such as different OS's
